@@ -4,7 +4,9 @@ Route::prefix('/admin')->group(function(){
  Route::get('/users','Admin\UserController@getUsers');
 
  //module products
- Route::get('/products','Admin\Productcontroller@getHome');
+ Route::get('/products','Admin\ProductController@getHome');
  //AÑADIR PRODUCTO
- Route::get('/product/add','Admin\Productcontroller@getProductAdd');
+ Route::get('/product/add','Admin\ProductController@getProductAdd');
+//CATEGORIES
+Route::get('/categories','Admin\CategoriesController@getHome');
 });
