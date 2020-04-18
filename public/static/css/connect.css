@@ -1,0 +1,13 @@
+body{background-color:#f6f6f6;margin:0;font-size: 14px;}
+.box{background-color:#fff;border-radius:8px;border:1px solid #d6d6d6;position:absolute;width:500px}
+.box_login{position:absolute;left:calc(50% - 250px);top:calc(50% - 246px)}
+.box_register{position:absolute;left:calc(50% - 250px);top:calc(50% - 371px)}
+.form-control{outline: none;box-shadow: none;}
+.form-control:focus{outline: none;box-shadow: none;}
+.form-control:active{outline: none;box-shadow: none;}
+.inside{padding: 16px;}
+.header{padding: 16px;border-radius: 8px 8px 0px 0px;background-color:aliceblue;}
+.header a img{width: 40%;display: block;margin: 0px auto;}
+.mt16{margin-top: 16px;}
+.footer{text-align: center;}
+.footer a {display: inline-block;font-size: .8em;}
