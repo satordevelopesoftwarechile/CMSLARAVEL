@@ -61,10 +61,11 @@
                         <!--                nombre,valorpordefecto,propiedades -->
                         {!! Form::number('price',null,['class'=>'form-control','min'=>'0.00','step'=>'any'])!!}
                         </div>
-                         <!-- FIN CAMPO PRECIO -->
+                         <!-- FIN CAMPO PRECIO-->
                     </div>
+                    <!-- CAMPO EN DESCUENTO (?)-->
                     <div class="col-md-3">
-                        <label for="price">¿En Descuento?:</label>
+                        <label for="indiscount">¿En Descuento?:</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="far fa-keyboard"></i></span>
@@ -72,16 +73,39 @@
                          <!--                nombre,valorpordefecto,propiedades -->
                           {!!Form::select('indiscount',['0'=>'No','1'=>'Si'],0,['class'=>'custom-select'])!!}
                             </div>
-                         <!-- FIN CAMPO PRECIO -->
                     </div>
+                    <!-- FIN CAMPO EN DESCUENTO(?) -->
+                    <!-- CAMPO DESCUENTO -->
+                    <div class="col-md-3">
+                        <label for="discount">Descuento:</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="far fa-keyboard"></i></span>
+                                </div>
+                         <!--                nombre,valorpordefecto,propiedades -->
+                          {!!Form::number('indiscount',0.00,['class'=>'form-control','min'=>'0.00','step'=>'any'])!!}
+                            </div>   
+                    </div>
+                     <!-- FIN CAMPO DESCUENTO -->
+
                 </div>
                
                 <div class="row mtop16">
                     <div class="col-md-12">
                         <label for="content">Descripción</label>
-                        {!! Form::textarea('content',null,['class'=>'form-control'])!!}
+                        <!--el id editor es para que pueda ocupar el editor js ckeditor. -->
+                        {!! Form::textarea('content',null,['class'=>'form-control','id'=>'editor'])!!}
                     </div>
                 </div>
+
+                <!-- BTN GUARDAR -->
+                <div class="row mtop16">
+                    <div class="col-md-12">
+                        {!!Form::submit('Guardar',['class'=>'btn btn-success'])!!}
+                    </div>
+                </div>
+                <!--FIN BTN GUARDAR -->
+
             {!! Form::close()!!}
         </div>
     </div>
