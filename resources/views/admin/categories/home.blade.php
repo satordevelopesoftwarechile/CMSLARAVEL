@@ -61,6 +61,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-9">
+                    <div class="panel shadow">
+                        <div class="header">
+                            <h2 class="title"><i class="far fa-folder-open"></i>Categorias</h2>
+                        </div>
+                        <div class="inside">
+                            <div class="nav nav-pills nav-fills">
+                                @foreach(getModulesArray() as $m=>$k)
+                                <a href="{{url('/admin/categories/'.$m)}}" class="nav-link"><i class="fas fa-list"></i> {{$k}}</a>
+                                @endforeach
+                            </div>
+                            <table class="table mtop16">
+                                <thead>
+                                    <tr>
+                                        <td width="32"></td>
+                                        <td>Nombre</td>
+                                        <td width="140"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($cats as $cat)
+                                        <tr>
+                                            {{-- con esta funcion php podemos convertir el codigo html que viene de la bd --}}
+                                            <td>{!!htmlspecialchars_decode($cat->icono)!!}</td>
+                                            <td>{{$cat->name}}</td>
+                                            <td>
+                                                <div class="ops">
+                                                    <a href="{{url('/admin/category/'.$cat->id.'/edit')}}"  data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{url('/admin/category/'.$cat->id.'/delete')}}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     @endsection

@@ -39,3 +39,8 @@ h2.title{display: inline-block;color: #19213d;font-size: 1.1em;padding: 12px 16p
 
 
 /* PRODUCTS */
+
+/* CATEGORIES */
+.inside .nav .nav-link{border: 1px solid #75daad;margin-right: 8px;}
+.inside .nav .nav-link:hover{background-color: #75daad;color: #fff;}
+/* END OF CATEGORIES */
