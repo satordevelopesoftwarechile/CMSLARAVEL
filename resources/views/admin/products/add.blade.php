@@ -49,7 +49,7 @@
                     <!--FIN CAMPO CATEGORIA  -->
                 <!-- CAMPO IMAGEN DESTACADA -->
                 <div class="col-md-3">
-                    <label for="category">Imagen Destacada:</label>
+                    <label for="img">Imagen Destacada:</label>
                     <div class="custom-file">
                         {!! Form::file('img',['class'=>'custom-file-input','id'=>'customFile'])!!}
                         <label class="custom-file-label" for="customFile">Selecciona la Imagen</label>
@@ -90,7 +90,7 @@
                                     <span class="input-group-text" id="basic-addon1"><i class="far fa-keyboard"></i></span>
                                 </div>
                          <!--                nombre,valorpordefecto,propiedades -->
-                          {!!Form::number('indiscount',0.00,['class'=>'form-control','min'=>'0.00','step'=>'any'])!!}
+                          {!!Form::number('discount',0.00,['class'=>'form-control','min'=>'0.00','step'=>'any'])!!}
                             </div>   
                     </div>
                      <!-- FIN CAMPO DESCUENTO -->
