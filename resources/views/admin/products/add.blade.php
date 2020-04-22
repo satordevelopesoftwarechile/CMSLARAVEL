@@ -21,7 +21,7 @@
             <h2 class="title"><i class="fas fa-plus"></i>Agregar Producto</h2>
         </div>
         <div class="inside">
-            {!! Form::open(['url'=> '/admin/product/add']) !!}
+            {!! Form::open(['url'=> '/admin/product/add','files' => true]) !!}
                 <div class="row">
                 <!-- CAMPO NOMBRE PRODUCTO -->
                     <div class="col-md-6">
@@ -51,7 +51,7 @@
                 <div class="col-md-3">
                     <label for="img">Imagen Destacada:</label>
                     <div class="custom-file">
-                        {!! Form::file('img',['class'=>'custom-file-input','id'=>'customFile'])!!}
+                        {!! Form::file('img',['class'=>'custom-file-input','id'=>'customFile' ,'accept'=>'image/*'])!!}
                         <label class="custom-file-label" for="customFile">Selecciona la Imagen</label>
                     </div>
                 </div>

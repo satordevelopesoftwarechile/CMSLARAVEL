@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Models\Product;
 //slug
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Config;
+
 class ProductController extends Controller
 {
     public function __Construct(){
@@ -46,6 +48,14 @@ class ProductController extends Controller
         if($validator->fails()):
             return back()->withErrors($validator)->with('message','Se ha producido un error.')->with('typealert','danger')->withInput();
         else:
+            $path = '/'.date('Y-m-d'); //este folder de imagenes se separaran por fecha.
+            $fileExt=trim($request->file('img')->getClientOriginalExtension()); //obtener y limpiar extension del archivo.(jpg,png,gif)
+            $upload_path=Config::get('filesystems.disk.uploads.root');//asignamos de config filesystem una ruta para guardar nuestro archivo.
+            $name=Str::slug(str_replace($fileExt,'',$request->file('img')->getClientOriginalName()));//formatea el texto sin espacios en blanco ni caracteres especiales.
+            $filename=rand(1,999).'-'.$name.'.'.$fileExt;//evitamos que se sobreescriba los archivos, numero aleatorio de 1  a 100
+            return $filename;
+
+
             $product = new Product;
             //0 =producto borrador, 1= producto se ve directamente en la tienda.
             $product->status=0;
