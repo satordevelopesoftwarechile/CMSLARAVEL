@@ -9,8 +9,10 @@ Route::prefix('/admin')->group(function(){
  Route::get('/product/add','Admin\ProductController@getProductAdd');
  //POST GUARDAR PRODUCTOS(CREATE)
 Route::post('/product/add','Admin\ProductController@postProductAdd');
-
-
+ //EDITAR PRODUCTO
+ Route::get('/product/{id}/edit','Admin\ProductController@getProductEdit');
+//GUARDAR   PRODUCTO EDITADO
+Route::post('/product/{id}/edit','Admin\ProductController@postProductEdit');
 //CATEGORIES
 //HOME
 Route::get('/categories/{module}','Admin\CategoriesController@getHome');

@@ -10,4 +10,9 @@ class Product extends Model
     protected $dates = ['deleted_at'];
     protected $table = 'products';
     protected $hidden = ['created_at','update_at'];
+
+
+    public function cat(){
+        return $this->hasOne(Category::class,'id','category_id');
+    }
 }

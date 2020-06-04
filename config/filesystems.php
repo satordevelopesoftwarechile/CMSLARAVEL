@@ -54,9 +54,10 @@ return [
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+
         'uploads' => [
             'driver' => 'local',
-            'root' => storage_path('C:/laragon/www/cms/uploads')
+           'root' =>'C:/laragon/www/cms/public/uploads'
         ],
 
         's3' => [

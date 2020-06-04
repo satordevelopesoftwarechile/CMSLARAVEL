@@ -90,7 +90,7 @@
                                                 <div class="ops">
                                                     <a href="{{url('/admin/category/'.$cat->id.'/edit')}}"  data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-edit"></i></a>
                                                     <a href="{{url('/admin/category/'.$cat->id.'/delete')}}" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="fas fa-trash-alt"></i></a>
-                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach
